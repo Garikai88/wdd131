@@ -1,0 +1,240 @@
+/* Typography and the Color Scheme Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Container */
+header {
+    background-color: #0a3d62;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.highlight {
+    color: #f6e58d;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2f2f2f;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #006837;
+    border-radius: 5px;
+}
+
+/* Main */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.content {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.resources-box {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.resources-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-box li {
+    margin-bottom: 0.5rem;
+}
+
+.resources-box a {
+    text-decoration: none;
+    color: #004225;
+}
+
+.resources-box a:hover {
+    text-decoration: underline;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.section-heading {
+    background-color: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+figure {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #000;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+
+/* Two-column layout */
+.grid-two {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.left-column, .right-column {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.right-column h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.right-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.right-column li {
+    margin-bottom: 0.5rem;
+}
+
+.right-column a {
+    text-decoration: none;
+    color: #004225;
+}
+
+.right-column a:hover {
+    text-decoration: underline;
+}
+
+.right-column img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+figure {
+    margin: 1rem 0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-flex img {
+    flex: 1;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.centered-heading {
+    text-align: center;
+    border-bottom: 2px solid #004225;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.harare-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.harare-flex img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.harare-text {
+    flex: 1;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
