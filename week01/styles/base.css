@@ -133,6 +133,10 @@ figcaption {
     text-align: center;
 }
 
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
 
 /* Two-column layout */
 .grid-two {
@@ -180,15 +184,6 @@ figcaption {
     margin-bottom: 1rem;
 }
 
-figure {
-    margin: 1rem 0;
-}
-
-figcaption {
-    font-size: 0.9rem;
-    color: #666;
-    text-align: center;
-}
 
 .about-flex {
     display: flex;
@@ -206,6 +201,7 @@ figcaption {
     height: auto;
     border-radius: 8px;
 }
+
 
 .centered-heading {
     text-align: center;
@@ -228,6 +224,11 @@ figcaption {
 
 .harare-text {
     flex: 1;
+}
+
+a:focus {
+    outline: 2px dashed #f6e58d;
+    outline-offset: 4px;
 }
 
 /* Footer Styling */
