@@ -1,0 +1,271 @@
+/* Global Designs */
+:root {
+    --bg: #0f1419;
+    --surface: #151b22;
+    --card: #1b222b;
+    --text: #e8edf3;
+    --muted: #b6c0cc;
+    --accent: #2ec4b6;
+    --accent-2: #ff9f1c;
+    --flag-green: #008000;
+    --flag-red: #e60000;
+    --flag-yellow: #ffd700;
+    --flag-black: #000000;
+    --border: #24303d;
+    --shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+}
+
+/* Typography */
+body {
+    font-family: 'Segoe UI', Roboto, 'Noto Sans', Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(180deg, #0c1218 0%, #0f1419 100%);
+    line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+    padding: 1.2rem 1rem;
+    text-align: center;
+}
+
+.site-title {
+    margin: 0;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    letter-spacing: 0.5px;
+}
+
+.site-subtitle {
+    margin: 0.25rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Hero */
+.hero{
+    background-image: url('bumi-hills-scenery.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    
+
+.hero img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .hero img {height: 400px; }
+}
+
+/* Main */
+#content {
+    padding: 1rem;
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+/* Cards grid */
+.cards {
+    display: grid;
+    gap: 1rem;
+}
+
+@media(min-width: 640px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Card */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+    color: var(--accent);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12 36px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+/* Weather icon pseudo-element*/
+#weather-title::after {
+    content: '🌤️';
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+@media(max-width: 480px) {
+    #weather-title::after {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url('icons/weather.svg') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.weather-item .value {
+    font-size: 1rem;
+}
+
+/*Stat list*/
+.stat-list {
+    margin: 0;
+    padding: 0;
+}
+
+.stat {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed rgba(255, 255, 255,0.08);
+    transition: 0.3s ease;
+}
+
+.stat:last-child {
+    border-bottom: none;
+}
+
+.stat dt {
+    color: var(--muted);
+}
+
+.stat dd {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.stat:hover {
+    background: rgba(255, 255, 255,0.02);
+}
+
+
+.flag-bar {
+    height: 6px;
+    width: 100%;
+    box-shadow: inset 0 -1px 2px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeInBar 0.6s ease forwards;
+    background: linear-gradient(
+        to right,
+        var(--flag-green),
+        var(--flag-yellow),
+        var(--flag-red),
+        var(--flag-black)
+    );
+}
+
+@keyframes fadeInBar {
+    from {opacity: 0; transform: translateY(-10px); }
+    to {opacity: 1; transform: translateY(0);}
+}
+
+
+/*  The weather layout */
+.weather-grid {
+    display: grid;
+    gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+    .weather-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.weather-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem;
+}
+
+.waether-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.weather-item .label {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.weather-item .value{
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.weather-note {
+    margin-top: 0.5rem;
+    color: var(--accent-2);
+    font-size: 0.95rem;
+}
+
+.weather-icon {
+    display:  none;
+}
+
+@media (max-width: 768px) {
+    .weather-icon {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+.weather-icon svg {
+    width: 64px;
+    height: 64px;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: 1rem;
+    padding: 1.25rem 1rem 2rem;
+    text-align: center;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-bottom: 0;
+}
+
+.site-footer time {
+    color: var(--text);
+    font-weight: 600;
+}
+
+
+.bottom-bar {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    animation: fadeInBottom 0.6s ease forwards;
+}
+
+@keyframes fadeInBottom {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);;}
+}
+
+
