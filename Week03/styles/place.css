@@ -13,6 +13,7 @@
     --flag-black: #000000;
     --border: #24303d;
     --shadow: 0 10px 30px rgba(0,0,0,0.35);
+    --hover-bg: rgba(255,255,255,0.02);
 
 }
 
@@ -88,19 +89,21 @@ body {
     border-radius: 14px;
     padding: 1rem;
     box-shadow: var(--shadow);
+    will-change: transform, box-shadow;
 }
 
 .card h2 {
     margin: 0 0 0.75rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: var(--accent);
     position: relative;
 }
 
 .card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12 36px rgba(0,0,0,0.4);
-    transition: all 0.3s ease;
+    box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+    box-shadow: 0.3s ease;
 }
 
 /* Weather icon pseudo-element*/
@@ -119,10 +122,6 @@ body {
         background: url('icons/weather.svg') no-repeat center;
         background-size: contain;
     }
-}
-
-.weather-item .value {
-    font-size: 1rem;
 }
 
 /*Stat list*/
@@ -154,7 +153,7 @@ body {
 }
 
 .stat:hover {
-    background: rgba(255, 255, 255,0.02);
+    background: var(--hover-bg);
 }
 
 
@@ -200,7 +199,7 @@ body {
     padding: 0.75rem;
 }
 
-.waether-item:hover {
+.weather-item:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
