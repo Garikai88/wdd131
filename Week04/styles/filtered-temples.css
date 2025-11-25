@@ -3,6 +3,7 @@
     --primary-color: #c9a74d;
     --text-color: #333;
     --bg-light: #f9f9f9;
+    --shadow-light: 0 2px 5px rgba(0,0,0, 0.1);
 }
 
 body {
@@ -23,6 +24,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    justify-content: center;
 }
 
 nav a {
@@ -37,24 +39,21 @@ nav a {
 nav a:hover {
     background-color: var(--primary-color);
     color: var(--text-color);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-light);
 }
 
 main {
     max-width: 900px;
     margin: 0 auto;
     padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 main h1 {
     text-align: center;
     margin-bottom: 1rem;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
 }
 
 .gallery {
@@ -83,7 +82,7 @@ main {
 
 .temple-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0.1);
+    box-shadow: var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -118,8 +117,14 @@ figure img {
     background: none;
     border: none;
     cursor: pointer;
-    display: none;
     margin: 0.5rem;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #hamburgerBtn {
+        display: block;
+    }
 }
 
 #primaryNav ul {
@@ -136,25 +141,23 @@ figure img {
 
 #primaryNav.open ul {
     max-height: 500px;
-}
-
-#primaryNav.open ul {
     display: flex;
 }
+
 
 nav a.active {
     background-color: var(--primary-color);
     color: var(--text-color);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-light);
 }
 
 nav a:focus {
     background-color: var(--primary-color);
     color: var(--bg-light);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-light);
     outline: none;
 }
 
 nav a:focus-visible {
-    outline: 2px spolid #c9a74d;
+    outline: 2px solid #c9a74d;
 }
