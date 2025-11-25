@@ -1,12 +1,19 @@
+
+:root {
+    --primary-color: #c9a74d;
+    --text-color: #333;
+    --bg-light: #f9f9f9;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #fdfdfd;
-    color: #333;
+    background-color: var(--bg-light);
+    color: var(--text-color);
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
-    color: #2a2a2a;
+    color: var(--text-color);
 }
 
 nav ul {
@@ -20,16 +27,16 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333;
-    background-color: #f0f0f0;
+    color: var(--text-color);
+    background-color: var(--bg-light);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #c9a74d;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -72,23 +79,22 @@ main {
     max-width: 100%;
     border-radius: 6px;
     display: block;
-    border-radius: 6px;
 }
 
 .temple-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,00.1);
+    box-shadow: 0 4px 12px rgba(0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: #2a2a2a;
+    color: var(--text-color);
 }
 
 figure {
     text-align: center;
-    background-color: #fff;
+    background-color: var(--bg-light);
     padding: 0.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -123,13 +129,12 @@ figure img {
     list-style: none;
     padding: 0;
     margin: 0;
-    transition: all 0.3s ease;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
 }
 
-#primaryNv.open ul {
+#primaryNav.open ul {
     max-height: 500px;
 }
 
@@ -138,14 +143,18 @@ figure img {
 }
 
 nav a.active {
-    background-color: #c9a74d;
-    color: white;
-    box-shadow: 0 2px 5px rgb(0,0,0,0.1);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav a:focus {
-    background-color: #c9a74d;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--bg-light);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     outline: none;
+}
+
+nav a:focus-visible {
+    outline: 2px spolid #c9a74d;
 }

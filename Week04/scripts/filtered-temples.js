@@ -161,37 +161,48 @@ function displayTemples(filteredTemples) {
 
 document.addEventListener("DOMContentLoaded", () => {
   // The footer logic and humberger toggle 
+      const yearSpan = document.getElementById("currentYear");
+      const modifiedSpan = document.getElementById("lastModified");
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+      if (modifiedSpan) modifiedSpan.textContent = document.lastModified;
 
-  // Filtering logic
-  document.getElementById("home").addEventListener("click", () => {
-    displayTemples(temples);
-    setActiveFilter(e.target);
-  });
+  // Hamburger menu toggle
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const nav = document.getElementById("primaryNav");
 
-  document.getElementById("old").addEventListener("click", () => {
-    const oldTemples = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
-    displayTemples(oldTemples);
-    setActiveFilter(e.target);
-  });
+      if (hamburgerBtn && nav) {
+        hamburgerBtn.addEventListener("click", () => {
+          nav.classList.toggle("open");
+          hamburgerBtn.innerHTML = nav.classList.contains("open") ? "&#10006;" : "&#9776;";
+          hamburgerBtn.setAttribute("aria-expanded", nav.class.contains("open"));
 
-  document.getElementById("new").addEventListener("click", () => {
-    const newTemples = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
-    displayTemples(newTemples);
-    setActiveFilter(e.target);
-  });
+          
+        });
+      }
 
-  document.getElementById("large").addEventListener("click", () => {
-    const largeTemples = temples.filter(t => t.area > 90000);
-    displayTemples(largeTemples);
-    setActiveFilter(e.target);
-  });
+      // Filtering logic
+      document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", (e) => {
+          const id = e.target.id;
+          let filtered = temples;
 
-  document.getElementById("small").addEventListener("click", () => {
-    const smallTemples = temples.filter(t => t.area < 1000);
-    displayTemples(smallTemples);
-    setActiveFilter(e.target);
-  });
+          if (id == "old") {
+            filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+          } else if (id == "new") {
+            filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+          } else if (id == "large") {
+            filtered = temples.filter(t => t.area > 90000);
+          } else if (id == "small") {
+            filtered = temples.filter(t => t.area < 1000);
+          }
 
-  // Initial dsiplay
-  displayTemples(temples);
-});
+          displayTemples(filtered);
+          setActiveFilter(e.target)
+        });
+      });
+
+      // Initial display
+      displayTemples(temples);
+    });
+
+  

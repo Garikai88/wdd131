@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name ="description" content="A gallery of beautiful temples from around the world.">
-    <meta name ="keywords" content="temples, gallery, LDS, Zimbabwe, Africa, USA ">
-    <title>Temple Album</title>
+    <meta name ="description" content="Explore a dynamic gallery of sacred temples from around the worl, with dedication dates, locations, and historical insights.">
+    <meta name="author" content="Garikai Munamato Mangobe">
+    <title>Temple Album - A Gallery of Sacred Temples Around the World</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://font.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="Week04/styles/filtered-temples.css">
     <link rel="stylesheet" href="Week04/styles/filtered-large.css">
 
 </head>
 <body>
     <header>
+        <button id="hamburgerBtn" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation menu">
+            &#9776;
+        </button>
         <h1>Temple Album</h1>
-        <button id="hamburgerBtn" aria-label="Toggle Menu">&#9776;</button>
         <nav id="primaryNav">
             <ul>
                 <li><a href="#" id="home">Home</a></li>
@@ -28,11 +35,10 @@
 
     <main>
         <h2>Temple Gallery</h2>
-        <P>This gallery of pictures showcases beautiful temples from all around the world. It highlights their unique architecture and spiritual significance.</P>
+        <P>This gallery of pictures showcases beautiful temples from all around the world. It highlights their unique architecture and spiritual significance.</p>
         <div class="gallery"></div>    
     </main>
     <script src="Week04/scripts/filtered-temples.js" defer></script>
-</body>
 
 <footer>
     <p>&copy; <span id="currentYear"></span> | Garikai M. Mangobe| Zimbabwe</p>
