@@ -1,0 +1,28 @@
+/* Apply background and body font */
+body {
+    background: #f5f5f5; /* Light Gray background */
+    font-family: 'Open Sans', sans-serif; /* Body text */
+    color: #333; /* Default text color */
+    margin: 20px;
+}
+
+/* Headings use Montserrat */
+h1, h2 {
+    color: #1E3A5F; /* Dark Blue headings */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Accent color for strong text */
+strong {
+    color: #F97316; /* Orange accents */
+}
+
+/* Improve readability */
+p, li {
+    line-height: 1.6;
+}
+
+/* Optional: special sections use Roboto Mono */
+.special {
+    font-family: 'Roboto Mono', monospace;
+}
