@@ -7,6 +7,7 @@ const products = [
         ];
 
         const select = document.getElementById("product");
+
         products.forEach(product => {
             const option = document.createElement("option");
             option.value = product.id;
@@ -14,12 +15,13 @@ const products = [
             select.appendChild(option);
         });
 
-// Increment review count
-let reviewCount = localStorage.getItem("reviewCount");
-reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
-localStorage.setItem("reviewCount", reviewCount);
+// Review counter logic (only on confirmation page)
+if (window.location.pathname.includes("review.html")) {
+    let reviewCount = localStorage.getItem("reviewCount");
+    reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
+    localStorage.setItem("reviewCount", reviewCount);
 
-//Display message
-const message = document.createElement("p");
-message.textContent = `You have submitted ${reviewCount} review${reviewCount > 1 ? "s" : ""}.`;
-document.body.appendChild(message);
+    const message = document.createElement("p");
+    message.textContent = `You have submitted ${reviewCount} review${reviewCount > 1 ? "s" : ""}.`;
+    document.body.appendChild(message);
+}

@@ -56,16 +56,7 @@
         <a href="review.html">Product Review Form</a>
     </footer>
 
-    <script>
-       const products = ["Hammer", "Drill", "Cement Mixer", "Wheelbarrow"];
-       const select = document.getElementById("product");
-       products.forEach(product => {
-        const option = document.createElement("option");
-        option.value = product.toLowerCase().replace(/\s+/g, "-");
-        option.textContent = product;
-        select.appendChild(option);
-       });
-    </script>
+    <script src="scripts/form.js" defer></script>
     
 </body>
 </html>
