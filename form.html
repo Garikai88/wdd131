@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit a product review for Nungu Construction tools. Rate features, share feedback, and help improve our products.">
+    <meta name="author" content="Garikai Munamato Mangobe">
     <link rel="stylesheet" href="Week05/styles/form.css">
     <title>Product Review Form</title>
 </head>
 <body>
-    <h1>Product Review</h1>
+    <header>
+       <h1>Product Review</h1>
 
-    <form method="get" action="review.html">
+       <form method="get" action="review.html">
 
-        <label for="product">Product Name:</label>
-        <select id="product" name="product" required>
+         <label for="product">Product Name:</label>
+         <select id="product" name="product" required>
             <option value="" disabled selected>Select a Product.....</option>    
-        </select>
+         </select>
 
-        <fieldset>
+         <fieldset>
             <legend>Overall Rating:</legend>
             <div class="stars">
-                <label for="star1"><input type="radio" id="star1" name="rating" value="1"required>⭐</label>
-                <label for="star2"><input type="radio" id="star2" name="rating" value="2" />⭐⭐</label>
-                <label for="star3"><input type="radio" id="star3" name="rating" value="3" />⭐⭐⭐</label>
-                <label for="star4"><input type="radio" id="star4" name="rating" value="4" />⭐⭐⭐⭐</label>
-                <label for="star5"><input type="radio" id="star5" name="rating" value="5" />⭐⭐⭐⭐⭐</label>
+                <label for="star1"><input type="radio" id="star1" name="rating" value="1" required>⭐</label>
+                <label for="star2"><input type="radio" id="star2" name="rating" value="2" required >⭐⭐</label>
+                <label for="star3"><input type="radio" id="star3" name="rating" value="3" required>⭐⭐⭐</label>
+                <label for="star4"><input type="radio" id="star4" name="rating" value="4" required>⭐⭐⭐⭐</label>
+                <label for="star5"><input type="radio" id="star5" name="rating" value="5" required>⭐⭐⭐⭐⭐</label>
                 
             </div>
 
@@ -47,7 +50,8 @@
         <input type="text" id="username" name="username">
 
         <input type="submit" value="Submit Review">
-    </form>
+     </form>
+    </header>
 
      <footer>
         <p>&copy; 2025 ♦️ Nungu Construction. All rights reserved. ♦️</p>
@@ -55,8 +59,6 @@
         <p id="lastModified"></p>
     </footer>
 
-    <script src="Week05/scripts/form.js" defer></script>
-   
-    
+<script src="Week05/scripts/form.js" defer></script>    
 </body>
 </html>

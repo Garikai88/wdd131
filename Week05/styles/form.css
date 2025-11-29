@@ -97,6 +97,26 @@ input[type="checkbox"] {
     transform: scale(1.2);
 }
 
+@media screen and (max-width: 600px) {
+    form {
+        padding: 15px;
+        border-width: 1px;
+    }
+
+
+    input[type="submit"] {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .stars {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+
+
 
 
 /* Submit button */
