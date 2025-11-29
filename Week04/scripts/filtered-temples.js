@@ -186,15 +186,18 @@ document.addEventListener("DOMContentLoaded", () => {
           const id = e.target.id;
           let filtered = temples;
 
-          if (id == "old") {
-            filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
-          } else if (id == "new") {
+          if (id === "old") {
+            filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1990);
+          } else if (id === "new") {
             filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
-          } else if (id == "large") {
+          } else if (id === "large") {
             filtered = temples.filter(t => t.area > 90000);
           } else if (id == "small") {
-            filtered = temples.filter(t => t.area < 1000);
+            filtered = temples.filter(t => t.area < 3000);
+          } else if (id === "home") {
+            filtered = temples;
           }
+          
 
           displayTemples(filtered);
           setActiveFilter(e.target)
