@@ -187,13 +187,13 @@ document.addEventListener("DOMContentLoaded", () => {
           let filtered = temples;
 
           if (id === "old") {
-            filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1990);
+            filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
           } else if (id === "new") {
             filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
           } else if (id === "large") {
             filtered = temples.filter(t => t.area > 90000);
           } else if (id == "small") {
-            filtered = temples.filter(t => t.area < 3000);
+            filtered = temples.filter(t => t.area < 10000);
           } else if (id === "home") {
             filtered = temples;
           }
