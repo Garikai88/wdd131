@@ -15,6 +15,18 @@ const products = [
             select.appendChild(option);
         });
 
+const modified = new Date(document.lastModified);
+const options = {
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric',
+    hour: '2-digit', 
+    minute: '2-digit'
+};
+
+document.getElementById("lastModified").textContent =
+    "Last Modification: " + modified.toLocaleString('en-US', options);
+
 // Review counter logic (only on confirmation page)
 if (window.location.pathname.includes("review.html")) {
     let reviewCount = localStorage.getItem("reviewCount");
