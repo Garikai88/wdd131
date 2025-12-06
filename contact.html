@@ -3,62 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nungu Construction - Contact</title>
+    <meta name="description" content="Reach out to Nungu Construction for project inquiries, consultations, or partnership opportunities. We're here to build with you.">
+    <meta name="author" content="Garikai Munamato Mangobe">
+    <title>Contact Nungu Construction - Get in Touch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Roboto+Mono&display=swap">
     <link rel="stylesheet" href="project/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Hero -->
-     <section class="hero">
-        <div class="hero-text">
-            <h1>Contact Us</h1>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-     </section>
-
-     <!-- Contact Section -->
-      <main class="container">
-        <section class="contact">
-            <h2>Get in Touch</h2>
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-
-            <div class="contact-info">
-                <h3>Our Offices</h3>
-                <p>123 Construction Avenue, Harare, Zimbabwe</p>
-                <p>Email: info@nunguconstruction.com</p>
-                <p>Phone: +263 77 123 4567</p>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Contact Us</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
             </div>
         </section>
-      </main>
 
-      <footer>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/nungu construction" target="_bank" aria-label="Facebook">
-                <i class="fb fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com/@nunguconstruction" target="_blank" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://wa.me/263771234567" target="_blank" aria-label="whatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-        </div>
-        <p>&copy; 2025 Nungu Construction. All rights reserved.</p>
-      </footer>
+        <!-- Contact Section -->
+        <main class="container">
+            <section class="contact">
+                <h2>Get in Touch</h2>
+                <form methods="get" action="review.html">
+                    <fieldset>
+                        <legend>Services Review Form</legend>
+
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+
+                        <label for="services">Choose a service:</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="site-plsnning">Site Planning</option>
+                            <option value="civil works">Civil Works</option>
+                            <option value="consulting">Consulting</option>
+                        </select>
+
+                        <p>Rate our service quality:</p>
+                        <label><input type="radio" name="quality" value="excellent" required> Excellent</label>
+                        <label><input type="radio" name="quality" value="good"> Good</label>
+                        <label><input type="radio" name="quality" value="average"> Average</label>
+                        <label><input type="radio" name="quality" value="poor"> Poor</label>
+                        <label><input type="radio" name="quality" value="very-poor"> Very Poor</label>
+
+                        <label for="visit-date">Date of service:</label>
+                        <input type="date" id="visit-date" name="visit-date" required>
+
+                        <p>What did you like?</p>
+                        <label><input type="checkbox" name="likes" value="professionalism"> Professionalism</label>
+                        <label><input type="checkbox" name="likes" value="timeliness"> Timeliness</label>
+                        <label><input type="checkbox" name="likes" value="communication"> Communication</label>
+                        <label><input type="checkbox" name="likes" value="pricing"> Pricing</label>
+
+                        <label for="comments">Additional comments:</label>
+                        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Please, share your houghts..."></textarea>
+
+                        <button type="submit">Submit Review</button>
+                    </fieldset>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Our Offices</h3>
+                    <p>123 Construction Avenue, Harare, Zimbabwe</p>
+                    <p>Email: info@nunguconstruction.com</p>
+                    <p>Phone: +263 77 123 4567</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/nungu construction" target="_bank" aria-label="Facebook">
+                    <i class="fb fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/@nunguconstruction" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://wa.me/263771234567" target="_blank" aria-label="whatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Nungu Construction. All rights reserved.</p>
+        </footer>
+        <script src="project/scripts/script.js"></script> 
 </body>
 </html>
