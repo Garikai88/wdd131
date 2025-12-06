@@ -274,15 +274,6 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2-col on mobile */
 }
 
-.project-card {
-    position: relative;
-    overflow: hidden;
-}
-  
-
-.project-card img {
-   transition: transform 0.3s ease;
-}
 
 .project-card:hover img {
     transform: scale(1.05); /* subtle zoom */
@@ -548,6 +539,7 @@ pre {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    padding: 1rem;
 }
 
 .project-card:hover {
@@ -559,6 +551,7 @@ pre {
     width: 100%;
     height: auto;
     display: block;
+    margin-bottom: 1rem;
 }
 
 .project-card h3 {

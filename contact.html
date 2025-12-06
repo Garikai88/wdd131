@@ -31,22 +31,16 @@
         <main class="container">
             <section class="contact">
                 <h2>Get in Touch</h2>
-                <form methods="get" action="review.html">
+                <form method="get" action="review.html">
                     <fieldset>
                         <legend>Services Review Form</legend>
-
-                        <label for="name">Name</label>
-                        <input type="text" id="name" required>
-
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
 
                         <label for="services">Choose a service:</label>
                         <select id="service" name="service" required>
                             <option value="" disabled selected>Select a service</option>
-                            <option value="site-plsnning">Site Planning</option>
-                            <option value="civil works">Civil Works</option>
-                            <option value="consulting">Consulting</option>
+                            <option value=" Residential">Residential</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="industrial">Industrial</option>
                         </select>
 
                         <p>Rate our service quality:</p>
@@ -95,6 +89,6 @@
             </div>
             <p>&copy; 2025 Nungu Construction. All rights reserved.</p>
         </footer>
-        <script src="project/scripts/script.js"></script> 
+        <script src="project/scripts/script.js" defer></script> 
 </body>
 </html>
