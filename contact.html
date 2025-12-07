@@ -35,13 +35,16 @@
                     <fieldset>
                         <legend>Services Review Form</legend>
 
-                        <label for="services">Choose a service:</label>
+                        <label for="service">Choose a service:</label>
                         <select id="service" name="service" required>
                             <option value="" disabled selected>Select a service</option>
                             <option value=" Residential">Residential</option>
                             <option value="commercial">Commercial</option>
                             <option value="industrial">Industrial</option>
                         </select>
+                    </fieldset>
+
+                    <fieldset>
 
                         <p>Rate our service quality:</p>
                         <label><input type="radio" name="quality" value="excellent" required> Excellent</label>
@@ -52,6 +55,9 @@
 
                         <label for="visit-date">Date of service:</label>
                         <input type="date" id="visit-date" name="visit-date" required>
+                    </fieldset>   
+                    
+                    <fieldset>
 
                         <p>What did you like?</p>
                         <label><input type="checkbox" name="likes" value="professionalism"> Professionalism</label>
@@ -60,7 +66,7 @@
                         <label><input type="checkbox" name="likes" value="pricing"> Pricing</label>
 
                         <label for="comments">Additional comments:</label>
-                        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Please, share your houghts..."></textarea>
+                        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Please, share your thoughts..."></textarea>
 
                         <button type="submit">Submit Review</button>
                     </fieldset>
